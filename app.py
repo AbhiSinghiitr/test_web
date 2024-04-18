@@ -4,14 +4,24 @@ import librosa
 
 app = Flask(__name__)
 
+@app.route('/test',methods=['POST'])
+def test():
+    return jsonify({
+        'abc':'abc'
+    }),200
+
 @app.route('/analyze_sound', methods=['POST'])
 def analyze_sound():
     # Check if the POST request has the file part
+
+    print("checking for file")
+    
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
 
     file = request.files['file']
 
+    print(type(file))
     # If user does not select file, browser also
     # submit an empty part without filename
     if file.filename == '':
