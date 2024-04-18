@@ -1,4 +1,4 @@
 Flask==2.1.2
-librosa==0.8.1
+librosa==0.10.1
 Gunicorn
 Werkzeug==2.2.2
