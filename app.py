@@ -39,5 +39,3 @@ def analyze_sound():
         'sample_rate_hz': sample_rate_hz
     }), 200
 
-if __name__ == '__main__':
-    app.run(debug=True)
