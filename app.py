@@ -28,7 +28,7 @@ def analyze_sound():
         return jsonify({'error': 'No selected file'}), 400
 
     # Load the sound data
-    X, sample_rate = librosa.load('/content/output10.wav', res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
+    X, sample_rate = librosa.load(file, res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
 
     # Get the duration of the sound in seconds
     duration = librosa.get_duration(y=sound_data, sr=sample_rate)
